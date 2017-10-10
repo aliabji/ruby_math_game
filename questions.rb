@@ -5,5 +5,4 @@ class Question
       @num2 = rand(1..20)
       @operator = ['plus', 'minus', 'times', 'divided by'].sample
     end
-
   end

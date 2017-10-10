@@ -71,7 +71,6 @@ class Game
       end
       if (new_q.operator == 'times')
         answer = (new_q.num1 * new_q.num2)
-
         if (user_input == answer)
           puts "You got it!"
           new_game.add_to_turn
@@ -85,7 +84,6 @@ class Game
       end
       if (new_q.operator == 'divided by')
         answer = (new_q.num1 / new_q.num2)
-        
         if (user_input == answer)
           puts "You got it!"
           new_game.add_to_turn
@@ -106,17 +104,16 @@ class Game
         new_game.game_over
       end
     end
+
     if new_game.turn == 1 
       puts '--------- NEW TURN ---------'
       new_q = Question.new
 
       puts "Player 2: What does #{new_q.num1} #{new_q.operator} #{new_q.num2} equal? "
       user_input = gets.chomp.to_i
-    
 
       if (new_q.operator == 'plus')
         answer = (new_q.num1 + new_q.num2)
-
         if (user_input == answer)
           puts "You got it!"
           new_game.subtract_from_turn
@@ -132,7 +129,6 @@ class Game
       end
       if (new_q.operator == 'minus')
         answer = (new_q.num1 - new_q.num2)
-
         if (user_input == answer)
           puts "You got it!"
           new_game.subtract_from_turn
@@ -146,7 +142,6 @@ class Game
       end
       if (new_q.operator == 'times')
         answer = (new_q.num1 * new_q.num2)
-
         if (user_input == answer)
           puts "You got it!"
           new_game.subtract_from_turn
@@ -160,7 +155,6 @@ class Game
       end
       if (new_q.operator == 'divided by')
         answer = (new_q.num1 / new_q.num2)
-
         if (user_input == answer)
           puts "You got it!"
           new_game.subtract_from_turn
@@ -183,7 +177,5 @@ class Game
         new_game.game_over
         end
       end
-    end 
-
+    end
   end
-
