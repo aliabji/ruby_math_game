@@ -1,16 +1,12 @@
 class Players 
-  attr_accessor :name, :lives, :score
-    def initialize(name, lives, score)
+  attr_accessor :name, :lives
+    def initialize(name)
       @name = name
-      @lives = lives
-      @score = score
+      @lives = 3
     end
+
+    def lose_life
+      @lives -= 1
+    end
+
   end
-
-  puts 'Welcome to game. Please enter your name'
-
-  player1 = Players.new(gets.chomp, 3, 0)
-
-  puts player1.name
-
-  player2 = Players.new(gets.chomp, 3, 0)
